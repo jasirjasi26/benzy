@@ -11,7 +11,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final userController = Get.put(UserController());
-  bool isDaily = false;
+  bool isDaily = true;
   bool isMonthly = false;
 
   @override
@@ -22,7 +22,7 @@ class _MyHomePageState extends State<MyHomePage> {
           toolbarHeight: 70,
           elevation: 0,
           backgroundColor: Colors.transparent,
-          leading: Icon(
+          leading: const Icon(
             Icons.arrow_back_ios,
             color: Colors.black,
             size: 30,
@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 60,
                   width: 60,
                   color: Colors.grey[200],
-                  child: Icon(
+                  child: const Icon(
                     Icons.perm_identity_sharp,
                     color: Colors.blueGrey,
                     size: 30,
@@ -67,8 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(5.0),
+                      const Padding(
+                        padding: EdgeInsets.all(5.0),
                         child: Text(
                           "Daily Consumption Status",
                           style: TextStyle(
@@ -108,8 +108,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                       color: Colors.white, boxShadow: []),
                                   width: MediaQuery.of(context).size.width,
                                   height: 50,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(5.0),
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(5.0),
                                     child: Center(
                                       child: Text(
                                         "Your Daily Status",
@@ -126,9 +126,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
-                                    children: [
+                                    children: const [
                                       Padding(
-                                        padding: const EdgeInsets.all(5.0),
+                                        padding: EdgeInsets.all(5.0),
                                         child: Text(
                                           "Date",
                                           style: TextStyle(
@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.all(5.0),
+                                        padding: EdgeInsets.all(5.0),
                                         child: Text(
                                           "Breakfast",
                                           style: TextStyle(
@@ -148,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.all(5.0),
+                                        padding: EdgeInsets.all(5.0),
                                         child: Text(
                                           "Lunch",
                                           style: TextStyle(
@@ -158,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.all(5.0),
+                                        padding: EdgeInsets.all(5.0),
                                         child: Text(
                                           "Dinner",
                                           style: TextStyle(
@@ -176,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ///
                                 Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.4,
+                                      MediaQuery.of(context).size.height * 0.3,
                                   width: MediaQuery.of(context).size.width,
                                   child: GetX<UserController>(
                                       builder: (controller) {
@@ -223,7 +223,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                       index]
                                                                   .date
                                                                   .toString(),
-                                                              style: TextStyle(
+                                                              style: const TextStyle(
                                                                   fontSize: 15,
                                                                   fontWeight:
                                                                       FontWeight
@@ -294,7 +294,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                           ],
                                                         )),
                                                   ),
-                                                  SizedBox(
+                                                  const SizedBox(
                                                     height: 3,
                                                   )
                                                 ],
@@ -313,12 +313,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       : ClipRRect(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 color: Colors.white, boxShadow: []),
                             width: MediaQuery.of(context).size.width,
                             height: 50,
-                            child: Padding(
-                              padding: const EdgeInsets.all(5.0),
+                            child: const Padding(
+                              padding: EdgeInsets.all(5.0),
                               child: Center(
                                 child: Text(
                                   "Your Daily Status",
@@ -331,13 +331,13 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(5.0),
+                      const Padding(
+                        padding: EdgeInsets.all(5.0),
                         child: Text(
                           "Monthly Consumption Status",
                           style: TextStyle(
@@ -362,15 +362,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           ))
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     child: Container(
                       decoration:
-                          BoxDecoration(color: Colors.white, boxShadow: [
-                        new BoxShadow(
+                          const BoxDecoration(color: Colors.white, boxShadow: [
+                        BoxShadow(
                           color: Colors.black,
                           blurRadius: 20.0,
                         ),
@@ -380,8 +380,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
+                          const Padding(
+                            padding: EdgeInsets.all(5.0),
                             child: Text(
                               "Pending Food Orders",
                               style: TextStyle(
@@ -412,14 +412,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   userController
                                                       .totalBreakfastPending
                                                       .toString(),
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                       fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.bold,
                                                       color: Colors.white),
                                                 ))),
                                           ),
-                                          Text(
+                                          const Text(
                                             "Breakfast",
                                             style: TextStyle(
                                                 fontSize: 18,
@@ -450,14 +450,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   userController
                                                       .totalLunchPending
                                                       .toString(),
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                       fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.bold,
                                                       color: Colors.white),
                                                 ))),
                                           ),
-                                          Text(
+                                          const Text(
                                             "Lunch",
                                             style: TextStyle(
                                                 fontSize: 18,
@@ -488,14 +488,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   userController
                                                       .totalDinnerPending
                                                       .toString(),
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                       fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.bold,
                                                       color: Colors.white),
                                                 ))),
                                           ),
-                                          Text(
+                                          const Text(
                                             "Dinner",
                                             style: TextStyle(
                                                 fontSize: 18,
@@ -531,7 +531,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text(
+                                const Text(
                                   "Total Fine Amount :      ",
                                   style: TextStyle(
                                       fontSize: 18,
@@ -540,7 +540,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                                 Text(
                                   userController.fine.toString() + "/-",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.redAccent),
@@ -553,7 +553,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             );
           } else {
-            return Center(child: CircularProgressIndicator());
+            return Center(child: const CircularProgressIndicator());
           }
         }));
   }
