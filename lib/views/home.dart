@@ -103,6 +103,24 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.white,
                       child: Column(
                         children: [
+                          Container(
+                            decoration:
+                            BoxDecoration(color: Colors.white, boxShadow: []),
+                            width: MediaQuery.of(context).size.width,
+                            height: 50,
+                            child: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Center(
+                                child: Text(
+                                  "Your Daily Status",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.green),
+                                ),
+                              ),
+                            ),
+                          ),
                           Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Row(
