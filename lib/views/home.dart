@@ -387,7 +387,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.redAccent),
+                                  color: Colors.blue),
                             ),
                           ),
                           isMonthly
